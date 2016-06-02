@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">DriverApp</string>
 
-    <!-- Окно с вводом номера и прикладыванием карты -->
+    <!-- Окно ввода номера и прикладыванием карты -->
     <string name="inputNumberPhone">Введите ваш номер телефона</string>
     <string name="or">или</string>
     <string name="applySmartCard">Приложите смарт-карту</string>
+
+    <!-- Окно ввода пароля -->
+    <string name="inputPassword">Введите пароль</string>
+
+    <!-- Окно ввода кода -->
+    <string name="inputCode">Введите код идентификации</string>
+
+
 </resources>

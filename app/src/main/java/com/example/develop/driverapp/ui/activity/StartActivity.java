@@ -4,14 +4,10 @@ import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Bitmap;
-import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.widget.ImageView;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +19,7 @@ public class StartActivity extends Activity {
 
     private NfcManager nfcManager;
     private MaskedEditText textPhone;
+    private int lengthNumberPhone = 10;
 
 
     @Override
@@ -31,7 +28,19 @@ public class StartActivity extends Activity {
         setContentView(R.layout.activity_start);
         nfcManager = new NfcManager(this);
 
-        //textPhone = (MaskedEditText) findViewById(R.id.maskedEditText);
+        textPhone = (MaskedEditText) findViewById(R.id.maskedEditTextPhone);
+        textPhone.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                    if((textPhone.getUnmaskedText().length() == lengthNumberPhone)) {
+                        Intent intent = new Intent(StartActivity.this, CodeActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }
+                return false;
+            }
+        });
     }
 
     @Override
