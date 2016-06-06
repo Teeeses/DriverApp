@@ -12,5 +12,20 @@
     <!-- Окно ввода кода -->
     <string name="inputCode">Введите код идентификации</string>
 
+    <!-- Правое навигационное окно -->
+    <string name="summary">Сводка</string>
+    <string name="change">Смена</string>
+    <string name="options">Настройки</string>
+    <string name="dispatcher">Диспетчер</string>
+    <string name="camera">Камеры</string>
+
+    <!--Окно сводки -->
+    <string name="passengersInCabin">Пассажиров \nв салоне</string>
+    <string name="paidPlaces">Оплачено \nмест</string>
+    <string name="ticketsSold">Проданные билеты</string>
+    <string name="nextStop">Следующая остановка</string>
+    <string name="departureTime">Время отправления</string>
+
+
 
 </resources>

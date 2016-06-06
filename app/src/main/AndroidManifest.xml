@@ -14,6 +14,7 @@
             android:name=".ui.activity.StartActivity"
             android:screenOrientation="landscape">
 
+
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
@@ -46,6 +47,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
 

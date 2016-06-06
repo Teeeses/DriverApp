@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.develop.driverapp.R;
 
@@ -13,9 +15,14 @@ import com.example.develop.driverapp.R;
  */
 public class LeftFragment extends Fragment {
 
+    private ImageView wifiSignal;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View v = inflater.inflate(R.layout.fragment_left, container, false);
-        return v;
+        final View view = inflater.inflate(R.layout.fragment_left, container, false);
+
+
+        //wifiSignal.setImageIcon(android.R.drawable.);
+
+        return view;
     }
 }
