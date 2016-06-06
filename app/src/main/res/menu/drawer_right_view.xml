@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/summary_fragment"
+        android:icon="@mipmap/icon"
+        android:title="First" />
+    <item
+        android:id="@+id/change_fragment"
+        android:icon="@mipmap/icon"
+        android:title="Second" />
+    <item
+        android:id="@+id/options_fragment"
+        android:icon="@mipmap/icon"
+        android:title="Third" />
+    <item
+        android:id="@+id/dispatcher_fragment"
+        android:icon="@mipmap/icon"
+        android:title="Fhou" />
+    <item
+        android:id="@+id/camera_fragment"
+        android:icon="@mipmap/icon"
+        android:title="Five" />
+</menu>
