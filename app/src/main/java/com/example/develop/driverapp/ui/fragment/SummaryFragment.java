@@ -40,4 +40,5 @@ public class SummaryFragment extends Fragment {
         lostTime.setText("Через 9 минут");
         return view;
     }
+
 }

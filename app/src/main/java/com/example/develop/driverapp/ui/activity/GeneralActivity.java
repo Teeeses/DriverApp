@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 import com.example.develop.driverapp.R;
 import com.example.develop.driverapp.ui.fragment.ChangeFragment;
+import com.example.develop.driverapp.ui.fragment.SosFragment;
 import com.example.develop.driverapp.ui.fragment.SummaryFragment;
 
 /**
@@ -17,21 +18,38 @@ import com.example.develop.driverapp.ui.fragment.SummaryFragment;
  */
 public class GeneralActivity extends FragmentActivity implements View.OnClickListener{
 
+    //Right navigation
     ImageButton summaryButton;
     ImageButton changeButton;
     ImageButton optionsButton;
     ImageButton dispatcherButton;
     ImageButton cameraButton;
 
+    //Left navigation
+    ImageButton topButton;
+    ImageButton centerButton;
+    ImageButton downButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_general);
+        createLeftNavigationButton();
         createRightNavigationButton();
+
         SummaryFragment summaryFragment = new SummaryFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, summaryFragment).commit();
         setBackgroundButton(summaryButton);
+    }
+
+    private void createLeftNavigationButton() {
+        topButton = (ImageButton) findViewById(R.id.topButtonLeftNavigation);
+        centerButton = (ImageButton) findViewById(R.id.centerButtonLeftNavigation);
+        downButton = (ImageButton) findViewById(R.id.downButtonLeftNavigation);
+
+        topButton.setOnClickListener(this);
+        centerButton.setOnClickListener(this);
+        downButton.setOnClickListener(this);
     }
 
     private void createRightNavigationButton() {
@@ -82,6 +100,22 @@ public class GeneralActivity extends FragmentActivity implements View.OnClickLis
                 setAllButtonBackground();
                 setBackgroundButton(cameraButton);
                 break;
+
+            case R.id.topButtonLeftNavigation:
+                setAllButtonBackground();
+                break;
+            case R.id.centerButtonLeftNavigation:
+                setAllButtonBackground();
+                transaction = getSupportFragmentManager().beginTransaction();
+                SosFragment sosFragment = new SosFragment();
+                sosFragment.setArguments(getIntent().getExtras());
+                transaction.replace(R.id.fragmentContainer, sosFragment);
+                transaction.commit();
+                break;
+            case R.id.downButtonLeftNavigation:
+                setAllButtonBackground();
+                break;
+
             default:
                 break;
 

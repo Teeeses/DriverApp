@@ -40,5 +40,12 @@
     <string name="timeEnd">Время окончания</string>
     <string name="endChange">До конца смены</string>
 
+    <!--Окно SOS -->
+    <string name="sos">SOS</string>
+    <string name="struckWheel">Пробил колесо</string>
+    <string name="deadBattery">Сел аккумулятор</string>
+    <string name="terroristThreat">Угроза терракта</string>
+    <string name="healthThreat">Угроза здоровью пассажиров</string>
+    <string name="fireThreat">Угроза пажара</string>
 
 </resources>

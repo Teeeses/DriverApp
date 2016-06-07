@@ -11,7 +11,29 @@
         android:orientation="vertical"
         android:layout_weight="1.5">
 
+        <ImageButton
+            android:id="@+id/topButtonLeftNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_info"
+            android:background="@drawable/button_left_navigation_shape"
+            android:scaleType="fitCenter" />
 
+        <ImageButton
+            android:id="@+id/centerButtonLeftNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_info"
+            android:background="@drawable/button_left_navigation_shape"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/downButtonLeftNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_info"
+            android:background="@drawable/button_left_navigation_shape"
+            android:scaleType="fitCenter" />
     </LinearLayout>
 
 

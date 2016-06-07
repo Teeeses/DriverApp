@@ -5,9 +5,9 @@
     android:background="@color/white"
     android:orientation="horizontal" >
 
-    <fragment
-        android:id="@+id/mapFragment"
-        android:name="com.example.develop.driverapp.ui.fragment.MapFragment"
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
         android:layout_width="0px"
         android:layout_height="match_parent"
         android:layout_weight="1" />
@@ -20,7 +20,7 @@
         android:padding="10dp"
         android:layout_weight="1">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -29,6 +29,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:orientation="vertical">
 
                 <TextView
@@ -52,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="30dp">
+                android:layout_alignParentRight="true">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -70,7 +71,7 @@
                     android:layout_gravity="end"/>
             </LinearLayout>
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <LinearLayout
@@ -86,7 +87,7 @@
                 android:textColor="@color/redText"
                 android:layout_gravity="start"/>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -94,34 +95,32 @@
                 
                 <Button
                     android:id="@+id/buttonX1"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_x1_x2_x3_shape"
                     android:textColor="@color/white"
-                    android:text="x1"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1" />
+                    android:layout_alignParentLeft="true"
+                    android:text="x1" />
 
                 <Button
                     android:id="@+id/buttonX2"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_x1_x2_x3_shape"
+                    android:layout_centerHorizontal="true"
                     android:textColor="@color/white"
-                    android:text="x2"
-                    android:layout_weight="1" />
+                    android:text="x3" />
 
                 <Button
                     android:id="@+id/buttonX3"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
                     android:background="@drawable/button_x1_x2_x3_shape"
+                    android:layout_alignParentRight="true"
                     android:textColor="@color/white"
-                    android:text="x3"
-                    android:layout_weight="1" />
+                    android:text="x5" />
                 
-            </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
 
@@ -173,32 +172,32 @@
                 android:textColor="@color/redText"
                 android:layout_gravity="start"/>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/timeText"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:layout_gravity="center_vertical"
+                    android:layout_alignParentLeft="true"
                     android:textSize="@dimen/summary_time_size"
-                    android:maxLines="1"
-                    android:layout_weight="1"/>
+                    android:maxLines="1"/>
 
                 <TextView
                     android:id="@+id/lostTime"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/green"
-                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentRight="true"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/lost_time"
-                    android:layout_weight="1"/>
+                    android:background="@drawable/lost_time"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
 
