@@ -34,7 +34,7 @@ public class SummaryFragment extends Fragment {
 
         passengersInCabin.setText("43");
         paidPlaces.setText("41");
-        nextStop.setText("Центральный проезд \nХорошевскеого...");
+        nextStop.setText("Центральный проезд \nХорошевского...");
         numberPeople.setText("7 человек \n+малоподвижные (2)");
         timeText.setText("22:45");
         lostTime.setText("Через 9 минут");

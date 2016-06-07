@@ -27,17 +27,15 @@
             android:layout_weight="1">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="start"
-                android:layout_weight="1">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/passengersInCabin"
-                    android:textColor="@color/summaryText"
+                    android:textColor="@color/redText"
                     android:layout_gravity="start"/>
 
                 <TextView
@@ -51,18 +49,16 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="20dp"
-                android:layout_gravity="end"
-                android:layout_weight="1">
+                android:layout_marginLeft="30dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/paidPlaces"
-                    android:textColor="@color/summaryText"
+                    android:textColor="@color/redText"
                     android:layout_gravity="start"/>
 
                 <TextView
@@ -87,8 +83,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ticketsSold"
-                android:textColor="@color/summaryText"
+                android:textColor="@color/redText"
                 android:layout_gravity="start"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                
+                <Button
+                    android:id="@+id/buttonX1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_x1_x2_x3_shape"
+                    android:textColor="@color/white"
+                    android:text="x1"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/buttonX2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_x1_x2_x3_shape"
+                    android:textColor="@color/white"
+                    android:text="x2"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/buttonX3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/button_x1_x2_x3_shape"
+                    android:textColor="@color/white"
+                    android:text="x3"
+                    android:layout_weight="1" />
+                
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -103,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nextStop"
-                android:textColor="@color/summaryText"
+                android:textColor="@color/redText"
                 android:layout_gravity="start"
                 android:layout_weight="1"/>
 
@@ -137,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/departureTime"
-                android:textColor="@color/summaryText"
+                android:textColor="@color/redText"
                 android:layout_gravity="start"/>
 
             <LinearLayout
@@ -159,7 +192,7 @@
                     android:id="@+id/lostTime"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/lostTime"
+                    android:textColor="@color/green"
                     android:layout_marginLeft="20dp"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/lost_time"

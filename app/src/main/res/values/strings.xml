@@ -26,6 +26,19 @@
     <string name="nextStop">Следующая остановка</string>
     <string name="departureTime">Время отправления</string>
 
+    <!--Окно смены -->
+    <string name="finishedChange">Завершить смену</string>
+    <string name="suspend">Приостановить</string>
+    <string name="informationChange">Информация о смене</string>
+    <string name="driver">Водитель</string>
+    <string name="bus">Автобус</string>
+    <string name="conductor">Кондуктор</string>
+    <string name="route">Маршрут</string>
+    <string name="plan">План</string>
+    <string name="executionPlan">Исполнение плана</string>
+    <string name="soldTrips">Продано поездок</string>
+    <string name="timeEnd">Время окончания</string>
+    <string name="endChange">До конца смены</string>
 
 
 </resources>

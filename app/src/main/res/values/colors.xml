@@ -6,9 +6,11 @@
     <color name="black">#000000</color>
 
     <color name="mainColor">#282828</color>
+    <color name="change_button">#2b2b2b</color>
     <color name="grayText">#898989</color>
     <color name="clickedButton">#34373c</color>
-    <color name="summaryText">#c91a66</color>
-    <color name="lostTime">#0eb73e</color>
+    <color name="redText">#c91a66</color>
+    <color name="green">#0eb73e</color>
+    <color name="buttonX1X2X3">#626971</color>
 
 </resources>
