@@ -15,7 +15,7 @@
     <!-- Правое навигационное окно -->
     <string name="summary">Сводка</string>
     <string name="change">Смена</string>
-    <string name="options">Настройки</string>
+    <string name="intercom">Интерком</string>
     <string name="dispatcher">Диспетчер</string>
     <string name="camera">Камеры</string>
 
@@ -47,5 +47,13 @@
     <string name="terroristThreat">Угроза терракта</string>
     <string name="healthThreat">Угроза здоровью пассажиров</string>
     <string name="fireThreat">Угроза пажара</string>
+
+    <!-- Окно интерком -->
+    <string name="speak">Говорить</string>
+    <string name="playSound">Воспроизвести</string>
+    <string name="beingRecorded">Идет запись</string>
+
+    <!-- Окно диспетчер -->
+    <string name="yourMessage">Ваше сообщение</string>
 
 </resources>

@@ -11,29 +11,45 @@
         android:orientation="vertical"
         android:layout_weight="1.5">
 
-        <ImageButton
-            android:id="@+id/topButtonLeftNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_info"
-            android:background="@drawable/button_left_navigation_shape"
-            android:scaleType="fitCenter" />
 
-        <ImageButton
-            android:id="@+id/centerButtonLeftNavigation"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_info"
-            android:background="@drawable/button_left_navigation_shape"
-            android:scaleType="fitCenter" />
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
-        <ImageButton
-            android:id="@+id/downButtonLeftNavigation"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_info"
-            android:background="@drawable/button_left_navigation_shape"
-            android:scaleType="fitCenter" />
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/topButtonLeftNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_info"
+                android:background="@drawable/button_left_navigation_shape"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/centerButtonLeftNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_info"
+                android:background="@drawable/button_left_navigation_shape"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/downButtonLeftNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_info"
+                android:background="@drawable/button_left_navigation_shape"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
     </LinearLayout>
 
 
@@ -51,54 +67,138 @@
         android:background="@color/mainColor"
         android:layout_weight="2.5" >
 
-
-        <ImageButton
-            android:id="@+id/summaryButton"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@android:drawable/ic_menu_agenda"
-            android:background="@drawable/button_right_navigation_shape"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            />
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
-        <ImageButton
-            android:id="@+id/changeButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@android:drawable/ic_menu_compass"
-            android:background="@drawable/button_right_navigation_shape"
-            android:scaleType="fitCenter"
-            android:layout_weight="1" />
+            <ImageButton
+                android:id="@+id/summaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_agenda"
+                android:background="@drawable/button_right_navigation_shape"
+                android:scaleType="fitCenter" >
+            </ImageButton>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:clickable="false"
+                android:text="@string/summary" >
+            </TextView>
+        </FrameLayout>
 
-        <ImageButton
-            android:id="@+id/optionsButton"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@android:drawable/ic_menu_help"
-            android:background="@drawable/button_right_navigation_shape"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
-        <ImageButton
-            android:id="@+id/dispatcherButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@android:drawable/stat_sys_headset"
-            android:background="@drawable/button_right_navigation_shape"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            />
+            <ImageButton
+                android:id="@+id/changeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_compass"
+                android:background="@drawable/button_right_navigation_shape"
+                android:scaleType="fitCenter" >
+            </ImageButton>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:clickable="false"
+                android:text="@string/change" >
+            </TextView>
+        </FrameLayout>
 
-        <ImageButton
-            android:id="@+id/cameraButton"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@android:drawable/ic_menu_camera"
-            android:background="@drawable/button_right_navigation_shape"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            />
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/intercomButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_help"
+                android:background="@drawable/button_right_navigation_shape"
+                android:scaleType="fitCenter" >
+            </ImageButton>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:clickable="false"
+                android:text="@string/intercom" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/dispatcherButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:background="@drawable/button_right_navigation_shape"
+                android:scaleType="fitCenter" >
+            </ImageButton>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:clickable="false"
+                android:text="@string/dispatcher" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/cameraButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_camera"
+                android:background="@drawable/button_right_navigation_shape"
+                android:scaleType="fitCenter" >
+            </ImageButton>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:clickable="false"
+                android:text="@string/camera" >
+            </TextView>
+        </FrameLayout>
 
     </LinearLayout>
 

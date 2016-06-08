@@ -12,7 +12,7 @@
             <solid android:color="@color/mainColor"/>
 
             <padding
-                android:bottom="15dp"
+                android:bottom="20dp"
                 android:left="15dp"
                 android:right="15dp"
                 android:top="15dp" />

@@ -3,13 +3,14 @@ package com.example.develop.driverapp.ui.activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.develop.driverapp.R;
+import com.example.develop.driverapp.ui.fragment.CameraFragment;
 import com.example.develop.driverapp.ui.fragment.ChangeFragment;
+import com.example.develop.driverapp.ui.fragment.DispatcherFragment;
+import com.example.develop.driverapp.ui.fragment.IntercomFragment;
 import com.example.develop.driverapp.ui.fragment.SosFragment;
 import com.example.develop.driverapp.ui.fragment.SummaryFragment;
 
@@ -21,7 +22,7 @@ public class GeneralActivity extends FragmentActivity implements View.OnClickLis
     //Right navigation
     ImageButton summaryButton;
     ImageButton changeButton;
-    ImageButton optionsButton;
+    ImageButton intercomButton;
     ImageButton dispatcherButton;
     ImageButton cameraButton;
 
@@ -55,50 +56,50 @@ public class GeneralActivity extends FragmentActivity implements View.OnClickLis
     private void createRightNavigationButton() {
         summaryButton = (ImageButton) findViewById(R.id.summaryButton);
         changeButton = (ImageButton) findViewById(R.id.changeButton);
-        optionsButton = (ImageButton) findViewById(R.id.optionsButton);
+        intercomButton = (ImageButton) findViewById(R.id.intercomButton);
         dispatcherButton = (ImageButton) findViewById(R.id.dispatcherButton);
         cameraButton = (ImageButton) findViewById(R.id.cameraButton);
 
         summaryButton.setOnClickListener(this);
         changeButton.setOnClickListener(this);
-        optionsButton.setOnClickListener(this);
+        intercomButton.setOnClickListener(this);
         dispatcherButton.setOnClickListener(this);
         cameraButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        FragmentTransaction transaction;
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         switch (view.getId()) {
             case R.id.summaryButton:
                 setAllButtonBackground();
                 setBackgroundButton(summaryButton);
-                transaction = getSupportFragmentManager().beginTransaction();
-                SummaryFragment summaryFragment = new SummaryFragment();
-                summaryFragment.setArguments(getIntent().getExtras());
-                transaction.replace(R.id.fragmentContainer, summaryFragment);
+                transaction.replace(R.id.fragmentContainer,  new SummaryFragment());
                 transaction.commit();
                 break;
             case R.id.changeButton:
                 setAllButtonBackground();
                 setBackgroundButton(changeButton);
-                transaction = getSupportFragmentManager().beginTransaction();
-                ChangeFragment changeFragment = new ChangeFragment();
-                changeFragment.setArguments(getIntent().getExtras());
-                transaction.replace(R.id.fragmentContainer, changeFragment);
+                transaction.replace(R.id.fragmentContainer, new ChangeFragment());
                 transaction.commit();
                 break;
-            case R.id.optionsButton:
+            case R.id.intercomButton:
                 setAllButtonBackground();
-                setBackgroundButton(optionsButton);
+                setBackgroundButton(intercomButton);
+                transaction.replace(R.id.fragmentContainer, new IntercomFragment());
+                transaction.commit();
                 break;
             case R.id.dispatcherButton:
                 setAllButtonBackground();
                 setBackgroundButton(dispatcherButton);
+                transaction.replace(R.id.fragmentContainer, new DispatcherFragment());
+                transaction.commit();
                 break;
             case R.id.cameraButton:
                 setAllButtonBackground();
                 setBackgroundButton(cameraButton);
+                transaction.replace(R.id.fragmentContainer, new CameraFragment());
+                transaction.commit();
                 break;
 
             case R.id.topButtonLeftNavigation:
@@ -106,10 +107,7 @@ public class GeneralActivity extends FragmentActivity implements View.OnClickLis
                 break;
             case R.id.centerButtonLeftNavigation:
                 setAllButtonBackground();
-                transaction = getSupportFragmentManager().beginTransaction();
-                SosFragment sosFragment = new SosFragment();
-                sosFragment.setArguments(getIntent().getExtras());
-                transaction.replace(R.id.fragmentContainer, sosFragment);
+                transaction.replace(R.id.fragmentContainer, new SosFragment());
                 transaction.commit();
                 break;
             case R.id.downButtonLeftNavigation:
@@ -127,7 +125,7 @@ public class GeneralActivity extends FragmentActivity implements View.OnClickLis
     private void setAllButtonBackground() {
         summaryButton.setBackgroundColor(getResources().getColor(R.color.mainColor));
         changeButton.setBackgroundColor(getResources().getColor(R.color.mainColor));
-        optionsButton.setBackgroundColor(getResources().getColor(R.color.mainColor));
+        intercomButton.setBackgroundColor(getResources().getColor(R.color.mainColor));
         dispatcherButton.setBackgroundColor(getResources().getColor(R.color.mainColor));
         cameraButton.setBackgroundColor(getResources().getColor(R.color.mainColor));
     }
